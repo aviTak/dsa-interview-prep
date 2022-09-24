@@ -50,7 +50,7 @@ class LinkedList {
 
 public class Program {
     public static void main(String[] args) {
-		LinkedList l1 = new LinkedList();
+	LinkedList l1 = new LinkedList();
         l1.addFirst(9);
         l1.addFirst(7);
         l1.addFirst(5);
