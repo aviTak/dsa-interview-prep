@@ -58,7 +58,7 @@ public class Program {
         l2.print();
 
         System.out.println("Sorted LinkedList:-");
-        merge(l1.getHead(), l2.getHead());
+        print(merge(l1.getHead(), l2.getHead()));
 	}
 
     public static void print(Node head) {
@@ -70,7 +70,7 @@ public class Program {
         System.out.println();
     }
 
-    public static void merge(Node head1, Node head2) {
+    public static Node merge(Node head1, Node head2) {
         Node head = null;
 
         if(head1.data < head2.data) {
@@ -106,7 +106,7 @@ public class Program {
             t = t.next;
             head2 = head2.next;
         }
-        
-        print(head);
+
+        return head;
     }
 }
