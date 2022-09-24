@@ -25,6 +25,10 @@ class LinkedList {
         head = t;
     }
 
+    public Node getHead() {
+        return head;
+    }
+
     public void print() {
         Node t = head;
         while(t != null) {
@@ -34,8 +38,13 @@ class LinkedList {
         System.out.println();
     }
 
-    public Node getHead() {
-        return head;
+    public static void print(Node start) {
+        Node t = start;
+        while(t != null) {
+            System.out.print(t.data + " ");
+            t = t.next;
+        }
+        System.out.println();
     }
 }
 
@@ -58,17 +67,8 @@ public class Program {
         l2.print();
 
         System.out.println("Sorted LinkedList:-");
-        print(merge(l1.getHead(), l2.getHead()));
+        LinkedList.print(merge(l1.getHead(), l2.getHead()));
 	}
-
-    public static void print(Node head) {
-        Node t = head;
-        while(t != null) {
-            System.out.print(t.data + " ");
-            t = t.next;
-        }
-        System.out.println();
-    }
 
     public static Node merge(Node head1, Node head2) {
         Node head = null;
