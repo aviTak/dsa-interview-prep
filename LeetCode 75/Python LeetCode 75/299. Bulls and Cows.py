@@ -14,15 +14,15 @@ class Solution(object):
         guess_count = {}
         bull_count = 0
         cow_count = 0
-        for i in range(len(secret)):
-            if secret[i] == guess[i]:
+        
+        for i,j in zip(secret,guess):
+            if i == j:
                 bull_count +=1
             else:
-                secret_count = 1 + secret_count.get(secret_count[secret[i]],0)
-                guess_count  = 1 + guess_count.get(guess_count[guess[i]],0)
+                secret_count[i] = 1 +  secret_count.get(i,0)
+                guess_count[j]   = 1 + guess_count.get(j,0)
 
-        for i in secret_count:
-            for j in guess_count:
-                cow_count += min(secret_count[i],guess_count[i])
-        
+        for k in secret_count:
+            if k in guess_count:
+                cow_count += min(secret_count[k],guess_count[k])
         return '%sA%sB'%(bull_count,cow_count)
