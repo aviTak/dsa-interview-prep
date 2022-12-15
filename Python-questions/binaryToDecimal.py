@@ -12,3 +12,13 @@ def btd(binary): #binary = 1001
   return decimal 
 
 print(btd(10000))
+
+def dtb(decimal):
+  binary = '0'
+  while decimal >= 1:
+    binary = str(decimal%2) + binary
+    decimal = decimal //2
+  
+  print(binary)
+
+dtb(16)
