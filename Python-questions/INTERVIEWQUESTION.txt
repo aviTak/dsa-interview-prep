@@ -21,4 +21,20 @@ flatten the list
 list2 = [[10,11],[1,2,3,[4,5]]]
 output = [0,1,2,3,4,5]
 
+--Paytm
+oops concept
+decorator what why how
+memory management in python,scope in python, iterator and generator,
+caching
+proxy model
+module vs package
+touple dict and list ,can dict have list as a key
+else in for loop and try except finally
+namespace
+pip list 
+python path
+
+high order function , build in function
+class, init, object, can class take a memory
+
 
