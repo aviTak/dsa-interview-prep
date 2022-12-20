@@ -3,6 +3,7 @@ oops concept
 inhertance vs composition
 string advantage
 string vs string buffer
+multithreading in python
 Q - Given an integer A, generate a square matrix filled with elements from 1 to A^2  in spiral order.
 Given I/p A = 2 , 
  
@@ -20,6 +21,7 @@ out = [-1,2,3,-4,0,0,0]
 flatten the list
 list2 = [[10,11],[1,2,3,[4,5]]]
 output = [0,1,2,3,4,5]
+basic djago application design, http points,post method, database table design for comment box
 
 --Paytm
 oops concept
@@ -28,13 +30,75 @@ memory management in python,scope in python, iterator and generator,
 caching
 proxy model
 module vs package
-touple dict and list ,can dict have list as a key
+tuple dict and list ,can dict have list as a key
 else in for loop and try except finally
 namespace
 pip list 
 python path
-
 high order function , build in function
 class, init, object, can class take a memory
+
+--L&T
+abstraction and data hiding
+remove duplicates from list and print into asc order
+decimal to binary
+number = 5678
+def getSum(n): of number = 5+ 6+ 7 + 8 = 26 = 2+6
+binary to decimal
+ --
+ Enclosed Scope
+ deep copy(.copy=> make a new memory object) and shellow copy(== change in same list too)
+ MRO
+ 
+ --EXL
+ python3 djnagoadmin startproject dummy
+
+someapi/v1/1-100
+
+path(someapi/v1/"<int:id<1>",view.as_view()) # how to given range in this 1 to 9
+model = student
+class studenData(APIView):
+  def get(self,request,key=None):
+    if key is not None:
+      student = Student.objects.get(id=key) #filter what will happen
+      return Respose({'status':success,'data':Student},status=Http_200_ok)
+#names, ages = ['Raj', 'Ana'], [12, 48]
+#users = dict(zip(names, ages)) -- what will happen
+set1, set2 = {2, 3, 4}, {3, 4, 5}
+print(set1 |= set2) # intergation
+-- try and catch
+# list1 = [i for i in range(10,101)]
+list1 = []
+for i in range(10,101):
+  if i %10 == 0:
+    list1.append(i)
+print(list1)
+
+def running(num1,num2,list1):
+
+  if num1 < 0 or num2 < 0:
+    return -1
+  if num1 > num2:
+    return 0
+  
+  
+  sum = 0
+  try:
+    index1 = list1.index(num1)
+    index2 = list1.index(num2)
+    for i in range(index1,index2+1):
+      sum += list1[i]
+  except:
+    print('list have not this index')
+  
+  return sum
+
+print(running(1,40,list1))
+# 20,40
+# => 20+30+40
+
+
+ 
+ 
 
 
