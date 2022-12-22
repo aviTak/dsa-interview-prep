@@ -96,6 +96,12 @@ def running(num1,num2,list1):
 print(running(1,40,list1))
 # 20,40
 # => 20+30+40
+--Gemini:
+-- list and dict and touple
+-- flatten a list(recursion)
+-- how to copy one table column to other
+-- max salary
+-- having and where 
 
 
  
