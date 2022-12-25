@@ -104,7 +104,27 @@ print(running(1,40,list1))
 -- having and where 
 
 
- 
+ --barazzer shivraj (Capri global)
+ # Given an array of binary number, find the maximum length sub-array with equal number of 1 and 0.
+ Unit Tests are isolated tests that test one specific function. Integration Tests, meanwhile, are larger tests that focus on user behavior and testing entire applications.
+dependency injection in django
+https://www.cosmicpython.com/book/chapter_02_repository.html
+Repository Pattern
+decorator 
+-- 3c solution (kartik)
+list1 = [(57,3),(1,2),(3,4),(76,56)] sort according to last element of list
+razorpay intergation questions
+context switiching
+multithreading and multiprocessing 
+python is one thread langage but it is multiprocessing
+custom authnitication in djnago
+signals in djnago
+post save -> 2 table -> employee and organization but post_save done before organization but we need organization id too but server is failed 
+so how it handle => atomic transcation
+triangle question
+context manager => with keyboard
+model inheritance (python is multilevel or multiple inherance)
+
  
 
 
