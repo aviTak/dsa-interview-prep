@@ -131,5 +131,10 @@ model inheritance (python is multilevel or multiple inherance)
 #"Sometimes (when I nest them (my parentheticals) too much (like this (and this))) they get confusing."
 #Example: if the example string above is input with the number 10 (position of the first parenthesis), the output should be 79 (position of the last parenthesis).
 #
-
-
+#try except raise
+def example():
+  try:
+    int('N/A')
+  except ValueError as e:
+    raise RuntimeError('A parsing error occurred') from e... 
+example()
