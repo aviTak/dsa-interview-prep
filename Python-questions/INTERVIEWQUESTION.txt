@@ -138,3 +138,14 @@ def example():
   except ValueError as e:
     raise RuntimeError('A parsing error occurred') from e... 
 example()
+
+try:  
+    a = 100
+    b = 4 #"DataCamp"
+    assert a + b
+except AssertionError:  
+        print ("Assertion Exception Raised.")
+else:  
+    print ("Success, no error!")
+
+output = Success, no error!
