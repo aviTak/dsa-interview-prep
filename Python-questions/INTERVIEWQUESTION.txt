@@ -162,3 +162,20 @@ print(x.__next__())
 print(x.__next__())
 print(x.__next__())
 # print(x.__next__())
+
+
+list1 = [(57,3),(1,2),(3,4),(76,56)]
+
+# x = list(map(lambda x : sorted()))
+@greeting
+def sortedList(list1):
+  list2 = []
+  for i in range(len(list1)):
+    for j in range(i,len(list1)):
+      m = list1[i][len(list1[i])-1]
+      n = list1[j][len(list1[j])-1]
+      if m > n:
+        list1[i],list1[j] = list1[j],list1[i]
+  return list1
+
+print(sortedList(list1))
