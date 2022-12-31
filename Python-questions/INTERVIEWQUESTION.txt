@@ -149,3 +149,16 @@ else:
     print ("Success, no error!")
 
 output = Success, no error!
+
+
+def gen(a,b):
+  m = a + b
+  yield a
+  yield b
+  yield m
+
+x = gen(4,5)
+print(x.__next__())
+print(x.__next__())
+print(x.__next__())
+# print(x.__next__())
