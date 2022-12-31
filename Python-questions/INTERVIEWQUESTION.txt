@@ -125,6 +125,10 @@ triangle question
 context manager => with keyboard
 model inheritance (python is multilevel or multiple inherance)
 
- 
+ crakau
+ #Given an array of integers, find the highest product you can get from multiplying any three of the integers.
+ #Write a python function that, given a string , along with the position of an opening parenthesis in the string, finds the corresponding closing parenthesis.
+#"Sometimes (when I nest them (my parentheticals) too much (like this (and this))) they get confusing."
+#Example: if the example string above is input with the number 10 (position of the first parenthesis), the output should be 79 (position of the last parenthesis).
 
 
