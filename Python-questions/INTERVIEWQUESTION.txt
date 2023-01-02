@@ -164,9 +164,9 @@ print(x.__next__())
 # print(x.__next__())
 
 
-list1 = [(57,3),(1,2),(3,4),(76,56)]lflflf
+list1 = [(57,3),(1,2),(3,4),(76,56)]
 
-# x = list(map(lambda x : sorted()))
+# x = list(map(lambda x : sorted())) #sorted a list in one line function using lambda function
 @greeting
 def sortedList(list1):
   list2 = []
@@ -180,5 +180,15 @@ def sortedList(list1):
 
 print(sortedList(list1))
 
-Happy new year to me!! getting 25lpa in 2023 and helping people
+Happy new year to me!!
+-- Landmark
+django artichecture 
+wsgi.py file
+can I use multiple database in django
+touple and set difference
+trascation in databse,database engines,indexing
+let and var difference in js
+window and document  in js
+
+
 
