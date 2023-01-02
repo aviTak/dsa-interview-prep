@@ -203,7 +203,7 @@ $ ./manage.py migrate
 $ ./manage.py migrate --database=product_db
 DATABASE_ROUTERS = ['path.to.DbRouter', ] in setting file
 touple and set difference
-trascation in databse,database engines,indexing
+trascation in databse,database engines,indexing -- https://www.tutorialspoint.com/dbms/dbms_transaction.htm
 let and var difference in js
 let	                                                   var
 let is block-scoped.	                                  var is function scoped.
@@ -224,6 +224,30 @@ document:{ properties}                                                        wi
 
 Example: document.title will return the title of the document	              Example: window.document.title will return the title of the document.
 
-   
 
+# input list
+inputList = ['TutorialsPoint', 'Python', 'Codes', 'hello', 5, 'everyone', 10, 5.3]
+
+# Converting list elements to string using map()
+# Applying join() function to convert list to string
+# Without using the asterisk (*) operator
+print('Without Using * Operator :')
+print(' '.join(map(str,inputList)))
+
+# Using the asterisk (*) operator
+print('Using * operator : ')
+print (*inputList)
+MySQL database engines--
+Transactional Databases: In this type, we can roll back the write operations on the database if they are left incomplete. These operations are known as transactions. Majorly, modern engines are transactional.
+Non-Transactional Databases: Unlike transactional databases, they don’t provide Rollback/Commit. Instead, we need to manually code to perform the rollback operations.   
+https://www.geeksforgeeks.org/what-are-the-different-mysql-database-engines/#:~:text=Database%20engines%20are%20MySQL%20components,MySQL%205.5%20and%20above%20versions.
+
+
+Indexing is a way to optimize the performance of a database by minimizing the number of disk accesses required when a query is processed. It is a data structure technique which is used to quickly locate and access the data in a database. 
+
+Indexes are created using a few database columns. 
+
+The first column is the Search key that contains a copy of the primary key or candidate key of the table. These values are stored in sorted order so that the corresponding data can be accessed quickly. 
+Note: The data may or may not be stored in sorted order.
+The second column is the Data Reference or Pointer which contains a set of pointers holding the address of the disk block where that particular key value can be found.
 
