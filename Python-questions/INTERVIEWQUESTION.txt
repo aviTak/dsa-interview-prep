@@ -184,7 +184,24 @@ Happy new year to me!!
 -- Landmark
 django artichecture 
 wsgi.py file
-can I use multiple database in django
+can I use multiple database in django --  Django supports multiple databases.
+settings.py
+DATABASES = {
+   'default': {   
+     'ENGINE': 'django.db.backends.mysql',
+    'USER': 'mysql_user',
+    'PASSWORD': 'priv4te'
+    },
+
+   'product_db' : {
+      'ENGINE' : 'django_mongodb_engine',
+      'NAME' : 'my_database'
+   }
+}
+db_for_read,db_for_write,allow_relation,allow_migrate
+$ ./manage.py migrate
+$ ./manage.py migrate --database=product_db
+DATABASE_ROUTERS = ['path.to.DbRouter', ] in setting file
 touple and set difference
 trascation in databse,database engines,indexing
 let and var difference in js
