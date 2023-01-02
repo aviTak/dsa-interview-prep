@@ -205,7 +205,25 @@ DATABASE_ROUTERS = ['path.to.DbRouter', ] in setting file
 touple and set difference
 trascation in databse,database engines,indexing
 let and var difference in js
+let	                                                   var
+let is block-scoped.	                                  var is function scoped.
+let does not allow to redeclare variables.	            var allows to redeclare variables.
+Hoisting does not occur in let.	                       Hoisting occurs in var.
+console.log(a); //given error                          console.log(a); //no error
+let a =5;                                              var a =5;  
 window and document  in js
+Document                                                                     Window 
+It represents the document loaded inside the window or browser.	             It represents the browser window in which you are seeing the content.
+The properties related to it are stored in the document object.	             The properties related to it are stored in the window object.
+It is loaded after the loading window because the window contains a document.	It is loaded before the document because window container document.
+It is the root element of the document object model.	                         The window is the global element for all objects, functions, etc.
+It is an object of window.	It is an object of the browser.
+We can not access windows objects properties inside the document.	           We can access document object properties inside the window.
+logically:                                                                   logically:
+document:{ properties}                                                        window:{document:{properties}}
 
+Example: document.title will return the title of the document	              Example: window.document.title will return the title of the document.
+
+   
 
 
