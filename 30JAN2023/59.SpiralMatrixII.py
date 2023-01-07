@@ -1,3 +1,9 @@
+class Solution(object):
+    def generateMatrix(self, n):
+        """
+        :type n: int
+        :rtype: List[List[int]]
+        """
         matrix = [[0 for _ in range(n)] for x in range(n)]
         left, right = 0, len(matrix[0])
         top, bottom = 0, len(matrix)
@@ -34,3 +40,8 @@
           left += 1
         
         return matrix
+
+
+sol = Solution()
+# matrix = [[1,2,3],[4,5,6],[7,8,9],[10,11,12]]
+print(sol.generateMatrix(3))
