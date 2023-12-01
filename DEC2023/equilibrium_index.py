@@ -38,6 +38,22 @@ def eqindexvalue(arr):
             return j
     return -1
 
+def equi_index(arr):
+    n = len(arr)
+    left_sum = 0
+    total_sum = 0
+    for i in range(n):
+        total_sum += arr[i]
+    print(total_sum)
+    for j in range(n):
+        right_sum = total_sum - left_sum-arr[j]
+        if left_sum == right_sum:
+            return j
+        left_sum += arr[j]
+    
+    return -1
+
+
 
 arr = [-7, 1, 5, 2, -4, 3, 0]
 # arr = [1, 2, -2, -1]
