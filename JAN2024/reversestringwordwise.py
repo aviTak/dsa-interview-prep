@@ -32,26 +32,52 @@
 
 
 #no build in method of python but using slicing 
+# def reverseStringWordWise(string): 
+#     reversed_string = ""
+#     word_start = 0  #start point defined krna hai aage kaam aayega
+#     n = len(string)
+
+#     for i in range(n):
+#         # print(string[i])
+#         if string[i] == " " or i == n-1:
+#             if i == n-1:
+#                 word_end = i
+#             else:
+#                 word_end = i-1
+            
+#             # word_end= i if i== n-1 else i-1
+            
+#             #Now create the word again
+#             word = string[word_start:word_end+1]
+
+#             reversed_string = word + " " + reversed_string  #purani string m starting m word add kr dena hai
+
+#             word_start = i+1
+    
+#     return reversed_string
+
+#no built in functions of python just normal string but using list
+
 def reverseStringWordWise(string): 
     reversed_string = ""
-    word_start = 0  #start point defined krna hai aage kaam aayega
-    n = len(string)
+    list_data = list(string)
+    n = len(list_data)
 
+    def reverse_word(start,end):
+        while(start<end):
+            list_data[start], list_data[end] = list_data[end],list_data[start]
+            start += 1
+            end -= 1
+    
+    reverse_word(0,n-1) #reverse the whole string 
+    print(list_data)
+    #so as we now now I have all the reverse string but again/
+    # we need to reverse the string word according to our requirment
+    word_start = 0
     for i in range(n):
-        # print(string[i])
-        if string[i] == " " or i == n-1:
-            if i == n-1:
-                word_end = i
-            else:
-                word_end = i-1
-            
-            # word_end= i if i== n-1 else i-1
-            
-            #Now create the word again
-            word = string[word_start:word_end+1]
-
-            reversed_string = word + " " + reversed_string  #purani string m starting m word add kr dena hai
-
+        if list_data[i] == " " or i == n-1:
+            word_end = i if i==n-1 else i-1
+            reverse_word(word_start,word_end)
             word_start = i+1
     
-    return reversed_string
+    return ''.join(list_data)
