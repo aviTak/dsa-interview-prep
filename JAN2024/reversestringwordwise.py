@@ -29,3 +29,29 @@
 #         high -= 1
     
 #     return ' '.join(list1)
+
+
+#no build in method of python but using slicing 
+def reverseStringWordWise(string): 
+    reversed_string = ""
+    word_start = 0  #start point defined krna hai aage kaam aayega
+    n = len(string)
+
+    for i in range(n):
+        # print(string[i])
+        if string[i] == " " or i == n-1:
+            if i == n-1:
+                word_end = i
+            else:
+                word_end = i-1
+            
+            # word_end= i if i== n-1 else i-1
+            
+            #Now create the word again
+            word = string[word_start:word_end+1]
+
+            reversed_string = word + " " + reversed_string  #purani string m starting m word add kr dena hai
+
+            word_start = i+1
+    
+    return reversed_string
