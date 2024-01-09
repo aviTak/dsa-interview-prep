@@ -1,0 +1,50 @@
+
+# Non-Decreasing Array
+# We define an array as non-decreasing, if ARR[i] <= ARR[i + 1] holds for every i (0-based) such that (0 <= i <= N - 2).
+# Sample Input 1 :
+# 2 #test cases count
+# 3 #length of array
+# 8 4 6 #list of array
+# 3
+# 8 4 2
+# Sample Output 1 :
+# true
+# false
+
+#non decrease mean increasing means arr[i]>=arr[i-1]
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+def isPossible(arr, n):
+    # Write your code here.
+    count = 0
+    # if n <= 2:
+    #     return True
+    
+    for i in range(1, n):
+        if arr[i]<arr[i-1]:
+            count += 1
+            # If modifying the current element makes the array non-decreasing
+            if i == 1 or arr[i] >= arr[i - 2]:
+                print(arr[i-1],arr[i],'first')
+                arr[i - 1] = arr[i]
+                print(arr[i-1],arr[i],'second')
+                print(arr)
+                
+            else:
+                # If modifying the previous element makes the array non-decreasing
+                print(arr[i-1],arr[i],'3rd',arr[i - 2])
+                arr[i] = arr[i - 1]
+                print(arr[i-1],arr[i],arr)
+            
+            if count > 1:
+                return False
+
+    # Check if the number of modifications is at most 1
+    return True
+
+
+arr = [-10, 10, 0, 10, 3,2,4] #[-2, 7 ,-1 ,0, 1 ,2]
+print(isPossible(arr,len(arr)))
