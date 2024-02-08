@@ -17,6 +17,12 @@ def FrequentArray(arr):
             element = ele
     
     print(dict1)
+
+    
+    return element
+
+        
+FrequentArray(arr)
     # for key,value in dict1.items():
     #     count_freq = value
     #     if count_freq > maxi:
@@ -24,8 +30,3 @@ def FrequentArray(arr):
     #         maxi = count_freq
     #     elif count_freq == maxi:
     #         element = min(element,key)
-    
-    return element
-
-        
-FrequentArray(arr)
