@@ -1,5 +1,5 @@
 // Java program for the above approach
-import java.io.*;
+// import java.io.*;
 
 class GFG {
 
@@ -15,7 +15,7 @@ class GFG {
 		for (int i = 1; i < size; i++) {
 			if (prices[i] > prices[i - 1]) {
 				maxProfit += prices[i] - prices[i - 1];
-              profit += prices[i] - prices[i - 1];
+              	profit += prices[i] - prices[i - 1];
               	ML = i;
               
               if(i == size - 1) {
