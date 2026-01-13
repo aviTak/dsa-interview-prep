@@ -1,4 +1,4 @@
-public class Program
+public class Programs
 {
     public static void main(String[] args) {
 		int[] arr = {1, 0, 1, 0, 1, 0, 1, 0};
