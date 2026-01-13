@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Hello {
+public class Hellos {
     public static void main(String args[]) {
         int arr[] = {-2, -1, 0, 2, 3};
         int res[] = new int[arr.length];
