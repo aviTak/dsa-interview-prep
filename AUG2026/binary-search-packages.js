@@ -8,7 +8,7 @@
 
 function shipWithinDays(weights, D) {
     let low = Math.max(...weights),
-        high = weights.reduce((accum, num) => accum + num);
+        high = weights.reduce((accum, num) => accum + num, 0);
 
     while (low < high) {
         let mid = Math.floor((low + high) / 2);
@@ -33,7 +33,7 @@ function canShip(weights, D, mid) {
 
         if (sum > mid) {
             days++;
-            sum = 0;
+            sum = weights[i];
         }
     }
 
