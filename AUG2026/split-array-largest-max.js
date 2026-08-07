@@ -39,7 +39,7 @@ function canPartition(nums, k, maxW) {
 }
 
 function main () {
-    const nums = [7,2,5,10,8], k = 2;
+    const nums = [7,2,5,10,8], k = 20;
 
     console.log(largestSum(nums, k));
 }
