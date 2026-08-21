@@ -11,7 +11,6 @@ class Bucket {
 
         HashMap<Integer, Integer> map = new HashMap<>();
         
-
         int N = numbers.length;
 
         ArrayList<ArrayList<Integer>> bucket = new ArrayList<>(N + 1);
