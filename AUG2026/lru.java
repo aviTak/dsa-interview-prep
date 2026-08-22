@@ -1,5 +1,22 @@
 import java.util.*;
 
+public class lru {
+    public static void main(String[] args) {
+        LRU a = new LRU(5);
+        a.put(1, 1);
+        a.put(2, 2);
+        a.put(3, 3);
+        a.put(4, 4);
+        a.put(5, 5);
+        
+        System.out.println(a.get(1));
+        
+        a.put(6, 6);
+        
+        System.out.println(a.get(2));
+    }
+}
+
 class LRU {
     class Node {
         int key;
@@ -42,8 +59,11 @@ class LRU {
         return node.value;
     }
     
-    public void put(int key, int value) 
-    {
+    public void put(int key, int value) {
+        if (capacity <= 0) {
+            return;
+        }
+
         if (map.containsKey(key)) {
             remove(map.get(key));
         }
@@ -72,19 +92,3 @@ class LRU {
     
 }
 
-public class Solution {
-    public static void main(String[] args) {
-        LRU a = new LRU(5);
-        a.put(1, 1);
-        a.put(2, 2);
-        a.put(3, 3);
-        a.put(4, 4);
-        a.put(5, 5);
-        
-        System.out.println(a.get(1));
-        
-        a.put(6, 6);
-        
-        System.out.println(a.get(2));
-    }
-}
