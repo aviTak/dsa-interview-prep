@@ -66,6 +66,15 @@ class UnrolledLinkList {
         return false;
     }
 
+    public void display() {
+        Node curr = head;
+
+        while (curr != null) {
+            System.out.println(curr.values);
+            curr = curr.next;
+        }
+    }
+
     private void removeNode(Node node) {
         if (node == head) {
             head = head.next;
