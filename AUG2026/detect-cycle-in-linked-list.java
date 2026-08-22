@@ -22,9 +22,9 @@ class Solution {
         System.out.println(hasCycle(head));
     }
     
-    public static boolean hasCycle(Node head) {
+    public static int hasCycle(Node head) {
         if (head == null || head.next == null) {
-            return false;
+            return -1;
         }
         
         Node slow = head,
@@ -35,11 +35,17 @@ class Solution {
             fast = fast.next.next;
             
             if (slow == fast) {
-                return true;
+                Node ptr = head;
+                
+                while (ptr != slow) {
+                    ptr = ptr.next;
+                    slow = slow.next;
+                }
+                
+                return ptr.value;
             }
         }
         
-        return false;
+        return -1;
     }
 }
-
