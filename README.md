@@ -1,3 +1,3 @@
 # DSA Interview Preparation
 
-Questions solved so far in Java and Python.
+Questions solved so far in Java, Python, and JavaScript.
