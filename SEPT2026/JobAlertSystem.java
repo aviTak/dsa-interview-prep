@@ -1,3 +1,21 @@
+/*
+
+## Smart Alert Rule Engine (Java)
+
+We need an alert mechanism to notify actively looking jobseekers about new job postings that align with their specified criteria. Given the high volume of incoming jobs, a rule-based engine is necessary to efficiently match jobs to jobseekers and trigger the appropriate alerts.
+
+Design an in-memory `JobAlertSystem` that matches `Job` objects against a user's `AlertRule`. The matching logic must support a single rule for each user which can have a composite rule.
+
+The expectation is to **design the core classes and methods** required for this system.
+
+### Example Rules
+
+* `(Title = "Software Engineer")`
+* `(Title contains "Senior" OR Title contains "Staff") AND (NOT Company = "Acme Corp")`
+
+
+*/
+
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
