@@ -6,4 +6,50 @@ class Solution {
 
         System.out.println(isTree(num, edges));
     }
+
+    public static boolean isTree(int num, int[][] edges) {
+        if (num <= 0) {
+            return false;
+        }
+
+        int N = edges.length;
+
+        if (num == 1 && N == 0) {
+            return false;
+        }
+
+        if (num - 1 != N) {
+            return false;
+        }
+
+        // Make every node parent of itself
+        int[] parent = new int[num];
+
+        for (int i = 0; i < num; i++) {
+            parent[i] = i;
+        }
+
+        // Process each edge
+        for (int[] edge : edges) {
+            int rootU = find(edge[0], parent),
+                rootV = find(edge[1], parent);
+
+            if (rootU == rootV) {
+                return false;
+            }
+
+            // Union
+            parent[rootU] = rootV;
+        }
+
+        return true;
+    }
+
+    private static int find(int node, int[] parent) {
+        if (parent[node] == node) {
+            return node;
+        }
+
+        return parent[node] = find(parent[node], parent);
+    }
 }
