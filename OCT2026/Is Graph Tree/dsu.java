@@ -23,10 +23,12 @@ class Solution {
         }
 
         // Make every node parent of itself
-        int[] parent = new int[num];
+        int[] parent = new int[num],
+            rank = new int[num];
 
         for (int i = 0; i < num; i++) {
             parent[i] = i;
+            rank[i] = 0;
         }
 
         // Process each edge
@@ -38,8 +40,16 @@ class Solution {
                 return false;
             }
 
-            // Union
-            parent[rootU] = rootV;
+            // Union by rank
+            if (rank[rootU] < rank[rootV]) {
+                parent[rootU] = rootV;
+            } else if (rank[rootU] > rank[rootV]) {
+                parent[rootV] = rootU;
+            } else {
+                parent[rootU] = rootV;
+                rank[rootV]++;
+            }
+            
         }
 
         return true;
