@@ -12,11 +12,11 @@ class Solution {
             return false;
         }
 
-        int N = edges.length;
-
-        if (num == 1 && N == 0) {
+        if (edges == null) {
             return false;
         }
+
+        int N = edges.length;
 
         if (num - 1 != N) {
             return false;
@@ -28,7 +28,6 @@ class Solution {
 
         for (int i = 0; i < num; i++) {
             parent[i] = i;
-            rank[i] = 0;
         }
 
         // Process each edge
