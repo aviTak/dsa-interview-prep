@@ -20,17 +20,19 @@ class Solution {
         n15.left = n12;
         n15.right = n20;
 
-        display(root);
+        System.out.println(maxDepth(root));
     }
 
-    public static void display(TreeNode node) {
+
+    public static int maxDepth(TreeNode node) {
         if (node == null) {
-            return;
+            return 0;
         }
 
-        display(node.left);
-        System.out.print(node.val + " ");
-        display(node.right);
+        int left = maxDepth(node.left),
+            right = maxDepth(node.right);
+
+        return 1 + Math.max(left, right);
     }
 }
 
